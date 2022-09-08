@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Map Width="80" Height="25">
+    <cell X="13" Y="18">
+      <object Name="TerrainPutusTemplarStart"></object>
+    </cell>
+</Map>

@@ -1,0 +1,9 @@
+{
+	"id": "Playable_Putus_Templars",
+	"loadorder": 1,
+	"title": "Playable Putus Templars",
+	"description": "Play as an acolyte who has journeyed to Qud on a cruesade in search of artifacts, renown, and the land of their ancestors.",
+	"version": "1.0",
+	"author": "jakofranko",
+	"previewImage": "preview.png"
+}

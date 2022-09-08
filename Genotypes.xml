@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<genotypes>
+  <genotype Name="Putus Templar" MutationPoints="0" StatPoints="40" AllowedMutationCategories="" CyberneticsLicensePoints="2" RandomWeight="10" DisplayName="Putus Templar" Subtypes="KnightDisciplines" Class="" Code="a" StartingLocation="JoppaWorld.13.18.1.1.10@37,22" Tile="Creatures/sw_templar.bmp" DetailColor="r" BodyObject="Humanoid" BaseHPGain="1-4" BaseSPGain="75" BaseMPGain="0" Species="human" isTrueKin="True">
+    <stat Name="Strength" Minimum="10" Maximum="24" />
+    <stat Name="Agility" Minimum="10" Maximum="24" />
+    <stat Name="Toughness" Minimum="10" Maximum="24" />
+    <stat Name="Intelligence" Minimum="10" Maximum="24" />
+    <stat Name="Willpower" Minimum="12" Maximum="24" />
+    <stat Name="Ego" Minimum="12" Maximum="24" />
+    <skills>
+      <skill Name="Persuasion_RebukeRobot" />
+      <skill Name="Tactics_Run" />
+      <skill Name="Survival_Camp" />
+	  <skill Name="LongBlades" />
+	  <skill Name="LongBladesProficiency" />
+	  <skill Name="Shield" />
+      <skill Name="Shield_Block" />
+     </skills>
+    <reputations>
+      <reputation With="Templar" Value="600" />
+    </reputations>
+    <chargeninfo>   &amp;c&#249;&amp;y Moderate starting attributes with higher Willpower and Ego
+   &amp;c&#249;&amp;y Access to cybernetics
+   &amp;c&#249;&amp;y &amp;C100&amp;y skill points each level
+   &amp;c&#249;&amp;y May rebuke robots
+   &amp;c&#249;&amp;y High reputation with &amp;CPutus Templar</chargeninfo>
+  </genotype>
+</genotypes>

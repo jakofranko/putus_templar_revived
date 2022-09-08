@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<subtypes>
+    <class ID="KnightDisciplines" ChargenTitle="choose a path" SingularTitle="KnightDiscipline" StatBoxDisplay="true">
+        <category Name="Squires" DisplayName="&amp;rIn service to the Knights">
+            <subtype Name="Gunner-Knight Squire" Code="a" Gear="StartingGear_Gunner_Squire" Tile="Creatures/sw_templar_squire.bmp" DetailColor="O">
+                <stat Name="Strength" Bonus="1"/>
+                <stat Name="Toughness" Bonus="1"/>
+                <stat Name="Agility" Bonus="3"/>
+                <skills>
+                    <skill Name="Rifles"/>
+                    <skill Name="Rifle_SteadyHands"/>
+                    <skill Name="HeavyWeapons_StrappingShoulders"/>
+                </skills>
+            </subtype>
+            <subtype Name="Knight Squire" Code="b" Gear="StartingGear_Knight_Squire" Tile="Creatures/sw_templar_squire.bmp" DetailColor="R">
+                <stat Name="Strength" Bonus="2"/>
+                <stat Name="Toughness" Bonus="1"/>
+                <stat Name="Agility" Bonus="2"/>
+                <skills>
+                    <skill Name="LongBladesLunge"/>
+                    <skill Name="Shield_DeftBlocking"/>
+                    <skill Name="ShortBlades"/>
+                    <skill Name="ShortBlades_Bloodletter"/>
+                </skills>
+            </subtype>
+            <subtype Name="Newfather Squire" Code="c" Gear="StartingGear_Newfather_Squire" Tile="Creatures/sw_templar_squire.bmp" DetailColor="r">
+                <stat Name="Strength" Bonus="1"/>
+                <stat Name="Ego" Bonus="2"/>
+                <stat Name="Willpower" Bonus="2"/>
+                <skills>
+                    <skill Name="Persuasion"/>
+                    <skill Name="Persuasion_MenacingStare"/>
+                    <skill Name="Persuasion_Berate"/>
+                </skills>
+                <tag Name="InventoryPopulationTable" Value="Gentling_Items" />
+            </subtype>
+        </category>
+    </class>
+</subtypes>

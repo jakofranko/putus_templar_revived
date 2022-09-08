@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+    <object Name="TerrainPutusTemplarStart" Inherits="Terrain">
+        <part Name="Render" DisplayName="Putus Templar Encampment" RenderString="216" Tile="Terrain/sw_joppa.bmp" ColorString="&amp;w^k" DetailColor="r"/>
+        <part Name="Description" Short="Woven thread, sanguine amongst the viridian carpet, shields the knights who seek shelter and succor."/>
+        <xtagGrammar Proper="true"></xtagGrammar>
+        <tag Name="NoBiomes" Value="1"/>
+        <tag Name="OverlayColor" Value="&amp;W"/>
+        <tag Name="Terrain" Value="DesertCanyon"/>
+    </object>
+</objects>

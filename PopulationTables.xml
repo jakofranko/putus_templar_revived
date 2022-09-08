@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<populations>
+
+    <!-- Items -->
+    <population Name="StartingGear_Squire_Common">
+        <group Name="Items" style="pickeach">
+            <table Name="StartingGear_Common" />
+            <object Blueprint="HalfFullWaterskin" Number="2-3" />
+            <object Blueprint="SalveTonic" Number="2-4" />
+            <object Blueprint="Cloth Robe" Number="1" />
+            <object Chance="15" Blueprint="Ontological Anchor" Number="1"/>
+            <object Blueprint="Long Sword2" Number="1"/>
+            <object Blueprint="Steel Shield" Number="1" />
+            <object Blueprint="Leather Boots" Number="1" />
+            <object Blueprint="Leather Gloves" Number="1" />
+            <table Chance="75" Name="Explosives 1" />
+            <object Blueprint="Antimatter Cell" Number="10-20" />
+            <object Blueprint="Nanopneumatic Jackhammer" Number="1" />
+        </group>
+    </population>
+
+    <population Name="StartingGear_Knight_Squire">
+        <group Name="Items" Style="pickeach">
+            <table Name="StartingGear_Squire_Common" />
+            <object Blueprint="Dagger" Number="1-2" />
+            <object Blueprint="Banner of the Holy Rhombus" Number="1" />
+        </group>
+    </population>
+
+    <population Name="Gentling_Items">
+        <object Chance="50" Blueprint="Gentling Collar" />
+        <object Chance="50" Blueprint="Gentling Mask" />
+        <object Chance="10" Blueprint="MurmerMask" />
+    </population>
+
+    <population Name="StartingGear_Newfather_Squire">
+        <group Name="Items" Style="pickeach">
+            <table Name="StartingGear_Squire_Common" />
+        </group>
+    </population>
+
+    <population Name="StartingGear_Gunner_Squire">
+        <group Name="Items" Style="pickeach">
+            <table Name="StartingGear_Squire_Common" />
+            <object Blueprint="Lead Slug" Number="30-50" />
+            <object Blueprint="Musket" Number="1" />
+        </group>
+    </population>
+
+    <!-- Creatures -->
+    <population Name="Encampment Outskirts">
+      <object Blueprint="DaylightWidget"/>
+      <table Chance="2" Name="Templar War Party Major" />
+      <table Chance="25" Number="1-2" Name="Templar Weighted Toward Gunner" />
+      <table Chance="25" Number="1-2" Name="Templar Weighted Toward Knight" />
+      <table Chance="35" Number="1-2" Name="Templar" />
+      <object Chance="1" Blueprint="SultanShrine" />
+    </population>
+</populations>
