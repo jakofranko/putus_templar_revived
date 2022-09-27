@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<conversations>
+    <conversation ID="JanandDialogue" Namespace="PutusTemplarRevived.Dialogue.KnightCommander">
+        <node ID="Start">
+            <text>
+                Hail, =player.formalAddressTerm= =name=. If you need not tools of war, then prithy, leave me to my fire. The days are short and the forge is hot.
+            </text>
+            <choice
+                GotoID="ChooseGunnerKnightTemplar"
+                IfNotHaveTagOrProperty="BecameGunnerKnightTemplar"
+            >
+                <text>I have decided to pursue the Path of the Cannon.</text>
+            </choice>
+            <choice GotoID="End">Live and drink, forge-warden.</choice>
+        </node>
+
+        <node ID="ChooseGunnerKnightTemplar">
+            <text>Are you sure? Once these oaths have been taken, they cannot be forsaken.</text>
+            <choice GotoID="Start">Let me consider for some time longer.</choice>
+            <choice GotoID="ConfirmGunnerKnightTemplar">
+                <part Name="BecomeGunnerKnightTemplar" />
+                <text>Yes, I am sure.</text>
+            </choice>
+        </node>
+
+        <node ID="ConfirmGunnerKnightTemplar">
+            <text>Very well, so be it.</text>
+        </node>
+    </conversation>
+
+    <conversation ID="CythildeDialogue">
+        <!-- 1st quest -->
+        <node ID="Start" IfNotHaveQuest="Fetch Cythilde an Artifact">
+            <text>
+                *incoherent mumbling* ...traced to the crystaline diodes, but that doesn't account for the cross-phase interference alone... *incoherent mumbling*
+            </text>
+            <choice GotoID="Listening1">...</choice>
+            <choice GotoID="End">[Leave him be.]</choice>
+        </node>
+        <node ID="Listening1" IfNotHaveQuest="Fetch Cythilde an Artifact">
+            <text>
+                *continued mumbling* ...this should be impossible, but I cannot seem to disprove Djayudokht's third theorem without...who are you? Don't you have more important things to do than stand there like a dolt?
+            </text>
+            <choice GotoID="Inquiry1">What are these arcane schemas you have before you?</choice>
+            <choice GotoID="OfferServices1">I am newly arrived at this camp and am offering my services to those that might need them.</choice>
+            <choice GotoID="End">[Leave] I certainly have more important things to do than be insulted by whelp, metal meddler.</choice>
+        </node>
+        <node ID="Inquiry1">
+            <text>
+                You would not understand even if I explained it to you. Suffice it to say that I have made a discovery. Now leave me be.
+            </text>
+            <choice GotoID="OfferServices1">If you need aid in pursuing your studies, then my services may be rendered to you.</choice>
+            <choice GotoID="End">[Leave] Very well then.</choice>
+        </node>
+        <node ID="OfferServices1">
+            <text>
+                I have no use for a thug who cannot discern artifacts from artifice. If you can demonstrate discretion then perhaps I have a use for you.
+            </text>
+            <choice GotoID="End" StartQuest="Fetch Cythilde an Artifact">I am no thug, squire. But my oaths to our elders are greater than your insults. I will return.</choice>
+        </node>
+
+        <!-- 1st quest end, 2nd quest start -->
+        <node ID="Start" IfHaveActiveQuest="Fetch Cythilde an Artifact">
+            <text>
+                Ah, you again. What do you want?
+            </text>
+            <choice GotoID="GiveArtifact" CompleteQuestStep="Fetch Cythilde an Artifact~Return to Cythilde">
+                <text>Is this what you seek?</text>
+                <part Name="GiveArtifact"/>
+            </choice>
+            <choice GotoID="End">Nothing, I search still for an artifact.</choice>
+        </node>
+        <node ID="GiveArtifact" IfFinishedQuest="Fetch Cythilde an Artifact" IfNotHaveQuest="Fetch Cythilde Another Artifact">
+            <text>
+                Miracle or mishap? Hard to tell, but yes this item is of the ilk I work with. Fetch me another if you wish to prove your use to me.
+            </text>
+            <choice GotoID="End" StartQuest="Fetch Cythilde Another Artifact">I need prove nothing to you =pronouns.siblingTerm=, but I will return if I find another.</choice>
+        </node>
+
+        <!-- 2nd quest end -->
+        <node ID="Start" IfHaveActiveQuest="Fetch Cythilde Another Artifact">
+            <text>
+                Ah, you again. What do you want?
+            </text>
+            <choice GotoID="GiveAnotherArtifact" CompleteQuestStep="Fetch Cythilde Another Artifact~Return to Cythilde">
+                <text>I have found another artifact.</text>
+                <part Name="GiveArtifact"/>
+            </choice>
+            <choice GotoID="End">Nothing, I search still for an artifact.</choice>
+        </node>
+        <node ID="GiveAnotherArtifact">
+            <text>
+                Yes it is indeed. Very well, you've proven that you have eyes in your head, which is more than I can say for most of our single-minded bretheren. If you still have services to offer, I have a task of great import with which you could aid me.
+            </text>
+            <choice GotoID="Start Conduit">Tell me.</choice>
+            <choice GotoID="End">I must rest and check if there are more pressing needs. I may return.</choice>
+        </node>
+
+        <!-- 3rd quest start -->
+        <node ID="Start" IfNotHaveQuest="Finishing the Conduit">
+            <text>
+                You may have free time on your hands, but I have no time to spare; my discovery is of greatest import. Will you help me or not
+            </text>
+            <choice GotoID="Start Conduit">Very well.</choice>
+            <choice GotoID="End">Patience is a virtue, metal meddler.</choice>
+        </node>
+        <node ID="Start Conduit">
+            <text>
+                My instruments have detected a strange signal. I can neither decypher it nor detect its source. Alas, my equipment is too inferior. All I have is what I've been able to assemble from the detritus of this dreadful waste. I need to assemble a signal booster for my conduit, and I lack &amp;rcopper wire&amp;y. I need at least two hundred feet of the stuff. The rust wells is littered with that ancient cord.
+            </text>
+            <choice GotoID="End" StartQuest="Finishing the Conduit">A quest for a true knight I see. Very well, I will return with your...wire.</choice>
+            <choice GotoID="End">Methinks this is a task you can do yourself.</choice>
+        </node>
+
+        <!-- 3rd quest end -->
+        <node ID="Start" IfHaveActiveQuest="Finishing the Conduit">
+            <text>
+                Have you found the wire?
+            </text>
+            <choice GotoID="GiveCythildeWire" IfFinishedQuestStep="Finishing the Conduit~Find 200 feet of copper wire">
+                <text>Take it, and good riddance.</text>
+                <part Name="HaveItem" Blueprints="Wire Strand" Amount="200" Require="true"/>
+            </choice>
+            <choice GotoID="End">I don't have enough yet.</choice>
+        </node>
+        <node ID="GiveCythildeWire">
+            <text>
+                *incoherent mumbling as =pronouns.subjective= begins to assemble a strange device*
+
+                Oh, before I forget or cease to care, I repaired an old recoiler for you, and keyed it to this camp. You may find it useful.
+
+                After I assemble this Signal Conduit, I may have further need of you. Give me peace for some time, but return soon.
+            </text>
+            <choice GotoID="End" CompleteQuestStep="Finishing the Conduit~Return to Cythilde">
+                <text>Very well.</text>
+                <part Name="ReceiveItem" Blueprints="Joppa Recoiler" Identify="*"/>
+                <part Name="TakeItem" Blueprints="Wire Strand" Amount="200" Destroy="true"/>
+            </choice>
+        </node>
+    </conversation>
+
+    <conversation ID="GwignabethDialogue" Namespace="PutusTemplarRevived.Dialogue.KnightCommander">
+        <node ID="Start">
+            <text>
+                Hail, my =pronouns.offspringTerm= =name=. I heard what happened to your party. My sincerest condolences squire. Alas, such is the price of war. Please rest a while here, and find succor for your body and mind. When you are ready, please speak with the others in the camp and offer them your services. There is much work to be done. I welcome you into our war-band.
+            </text>
+            <choice
+                GotoID="ChooseKnightTemplar"
+                IfNotHaveTagOrProperty="BecameKnightTemplar"
+            >
+                <text>I have decided to pursue the Path of the Sword and Shield.</text>
+            </choice>
+            <choice GotoID="Questions">I have some questions for you, if you have time.</choice>
+            <choice GotoID="End">Live and drink, commander.</choice>
+        </node>
+
+        <node ID="ChooseKnightTemplar">
+            <text>Are you sure? Once these oaths have been taken, they cannot be forsaken.</text>
+            <choice GotoID="Start">Let me consider for some time longer.</choice>
+            <choice GotoID="ConfirmKnightTemplar">
+                <part Name="BecomeKnightTemplar" />
+                <text>Yes, I am sure.</text>
+            </choice>
+        </node>
+        <node ID="ConfirmKnightTemplar">
+            <text>Very well, so be it.</text>
+        </node>
+
+        <node ID="Questions">
+            <text>I am happy to give you answers, if I have them.</text>
+            <choice GotoID="ExplainCamp">What can you tell me of your encampment here?</choice>
+            <choice GotoID="ExplainWork">To whom might I offer my services here?</choice>
+            <choice GotoID="ExplainResidents">What can you tell me of the other Templars?</choice>
+            <choice GotoID="Start">I'd like to talk about something else.</choice>
+            <choice GotoID="End">Live and drink, commander.</choice>
+        </node>
+        <node ID="ExplainCamp" Inherits="Questions">
+            <text>I have established this base camp as a locus for our brethren. From here, parties and war-bands can rest, gather, strategize, and set out for exploration and glorious battle. Too often our people perish alone, crazed by blood- or glory-lust. I seek to offer order in place of madness.</text>
+        </node>
+        <node ID="ExplainWork" Inherits="Questions">
+            <text>
+                Janand, at his forge to the west, always has a lot on his metaphorical anvil.
+
+                Cythilde, in his workshop to the northwest, has made a discovery and I'm afraid he has bitten of more than he can chew.
+            </text>
+        </node>
+        <node ID="ExplainResidents" Inherits="Questions">
+            <text>TODO </text>
+        </node>
+    </conversation>
+</conversations>

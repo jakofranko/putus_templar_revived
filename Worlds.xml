@@ -17,7 +17,7 @@
             </zone>
 
             <!-- Encampment surrounding ground parasang -->
-            <zone Level="10" x="0-2" y="0-2" Name="Putus Templar Camp Approach" NameContext="PutusTemplarEncampment" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-50" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="200-3000">
+            <zone Level="10" x="0-2" y="0-2" Name="camp approach" NameContext="PutusTemplarEncampment" IndefiniteArticle="some" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-50" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="200-3000">
                 <builder Class="Hills"></builder>
                 <postbuilder Class="ZoneTemplate:DesertCanyon"></postbuilder>
                 <population Table="Encampment Outskirts"></population>
@@ -26,8 +26,7 @@
 
             <!-- Encampment proper -->
             <zone Level="10" x="1" y="1" Name="Putus Templar Camp" ProperName="true" IncludeStratumInZoneDisplay="false" HasWeather="true" WindSpeed="0-50" WindDirections="N,NW,NW,W,W,SW,S,SE" WindDuration="200-3000">
-                <builder Class="Hills"></builder>
-                <postbuilder Class="ZoneTemplate:DesertCanyon"></postbuilder>
+                <builder Class="JoppaOutskirts"></builder>
                 <map FileName="Putus_Templar_StartingLocation.rpm"></map>
                 <builder Class="Music" Track="Overworld1" Chance="10"></builder>
                 <builder Class="IsCheckpoint" Key="PutusTemplarEncampment"></builder>

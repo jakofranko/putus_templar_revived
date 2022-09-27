@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<quests>
+    <quest
+        Name="Fetch Cythilde an Artifact"
+        Level="3"
+        Manager="BringCythildeAnArtifact"
+        Accomplishment="You found an artifact for a rude tinkerer."
+        Hagiograph="In a temporary rhombus of hide and hair, =name= showed mercy on an ungrateful inventor."
+        HagiographCategory="Trysts">
+        <step Name="Find an Artifact" XP="0">
+            <text>Search Qud for an artifact.</text>
+        </step>
+        <step Name="Return to Cythilde" XP="75">
+            <text>Return to Cythilde with the artifact.</text>
+        </step>
+    </quest>
+
+    <quest
+        Name="Fetch Cythilde Another Artifact"
+        Level="5"
+        Manager="BringCythildeAnotherArtifact"
+        Accomplishment="You found another artifact for a rude tinkerer."
+        Hagiograph="By the light of a smoky fire, =name= showed mercy on an ungrateful inventor."
+        HagiographCategory="Trysts">
+        <step Name="Find Another Artifact" XP="0">
+            <text>Search Qud for another artifact.</text>
+        </step>
+        <step Name="Return to Cythilde" XP="150">
+            <text>Return to Cythilde with the artifact.</text>
+        </step>
+    </quest>
+
+    <quest
+        Name="Finishing the Conduit"
+        Level="7"
+        Manager="BringCythildeWire"
+        Accomplishment="With your help, Cythilde detected a strange signal."
+        Hagiograph="Under a sanguine sky, =name= invented the Signal Conduit and detected a strange signal."
+        HagiographCategory="CreatesSomething">
+        <step Name="Find 200 feet of copper wire" XP="0">
+            <text>Search the Rustwells, southeast of the Putus Templar Encampment, for 200 total feet of &amp;rCopper Wire&amp;Y</text>
+        </step>
+        <step Name="Return to Cythilde" XP="500">
+            <text>Deliver 200 feet of &amp;rCopper Wire&amp;Y to Cythilde</text>
+        </step>
+    </quest>
+</quests>

@@ -19,10 +19,13 @@
     <reputations>
       <reputation With="Templar" Value="600" />
     </reputations>
-    <chargeninfo>   &amp;c&#249;&amp;y Moderate starting attributes with higher Willpower and Ego
-   &amp;c&#249;&amp;y Access to cybernetics
-   &amp;c&#249;&amp;y &amp;C100&amp;y skill points each level
-   &amp;c&#249;&amp;y May rebuke robots
-   &amp;c&#249;&amp;y High reputation with &amp;CPutus Templar</chargeninfo>
+    <chargeninfo>
+        &amp;c&#249;&amp;y Moderate starting attributes with higher Willpower and Ego
+        &amp;c&#249;&amp;y Access to cybernetics
+        &amp;c&#249;&amp;y &amp;C100&amp;y skill points each level
+        &amp;c&#249;&amp;y May rebuke robots
+        &amp;c&#249;&amp;y Training in Long Blades and Shields
+        &amp;c&#249;&amp;y High reputation with &amp;CPutus Templar
+    </chargeninfo>
   </genotype>
 </genotypes>

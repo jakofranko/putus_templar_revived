@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
+    <!-- Terrain -->
     <object Name="TerrainPutusTemplarStart" Inherits="Terrain">
         <part Name="Render" DisplayName="Putus Templar Encampment" RenderString="216" Tile="Terrain/sw_joppa.bmp" ColorString="&amp;w^k" DetailColor="r"/>
         <part Name="Description" Short="Woven thread, sanguine amongst the viridian carpet, shields the knights who seek shelter and succor."/>
@@ -7,5 +8,51 @@
         <tag Name="NoBiomes" Value="1"/>
         <tag Name="OverlayColor" Value="&amp;W"/>
         <tag Name="Terrain" Value="DesertCanyon"/>
+    </object>
+
+    <!-- Creatures -->
+    <object Name="TemplarBlacksmithHero" Inherits="Gunner-Knight Templar">
+      <part Name="Render" DisplayName="Janand" Tile="creatures/sw_templar_gunner.bmp" RenderString="a" />
+      <part Name="ConversationScript" ConversationID="JanandDialogue" />
+      <part Name="Brain" Wanders="false" Factions="Templar-100" />
+      <part Name="Description" Short="A grizzled =pronouns.personTerm=, soot and ash mixing with oil and sweat upon his palid flesh. Goggles addorn =pronouns.possessive= hairless head, and =pronouns.possessive= beard errupts like the vommit of a volcano from =pronouns.possessive= face. Years of forming the ground's metals have fortified =pronouns.possessive= arms, and you know that =pronouns.subjective= needeth not the hammer in =pronouns.possessive= leather-clad hands to crush an enemy." />
+      <part Name="Interesting" />
+      <stat Name="Level" Value="25" />
+      <stat Name="Hitpoints" Value="120" />
+      <stat Name="Strength" Value="24" />
+      <stat Name="Toughness" Value="26" />
+      <inventoryobject Blueprint="Goggles" />
+      <inventoryobject Blueprint="Leather Apron" />
+      <inventoryobject Blueprint="Leather Gloves" />
+      <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+      <tag Name="Gender" Value="male" />
+      <xtagGrammar Proper="true" />
+    </object>
+
+    <object Name="TemplarCommanderHero" Inherits="Knight Commander of the Holy Temple">
+      <part Name="Render" DisplayName="Gwignabeth" Tile="creatures/sw_templar_leader.bmp" RenderString="t" />
+      <part Name="ConversationScript" ConversationID="GwignabethDialogue" />
+      <part Name="Brain" Wanders="false" Factions="Templar-100" />
+      <part Name="Description" Short="A grizzled =pronouns.personTerm=, soot and ash mixing with oil and sweat upon his palid flesh. Goggles addorn =pronouns.possessive= hairless head, and =pronouns.possessive= beard errupts like the vommit of a volcano from =pronouns.possessive= face. Years of forming the ground's metals have fortified =pronouns.possessive= arms, and you know that =pronouns.subjective= needeth not the hammer in =pronouns.possessive= leather-clad hands to crush an enemy." />
+      <part Name="Interesting" />
+      <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+      <tag Name="Gender" Value="female" />
+      <xtagGrammar Proper="true" />
+    </object>
+
+    <object Name="TemplarTinkerSquire" Inherits="Phylactery Squire">
+      <part Name="Render" DisplayName="Cythilde" Tile="creatures/sw_templar_squire.bmp" RenderString="a" />
+      <part Name="ConversationScript" ConversationID="CythildeDialogue" />
+      <part Name="Brain" Wanders="false" Factions="Templar-100" />
+      <part Name="Description" Short="A grizzled =pronouns.personTerm=, soot and ash mixing with oil and sweat upon his palid flesh. Goggles addorn =pronouns.possessive= hairless head, and =pronouns.possessive= beard errupts like the vommit of a volcano from his face. Years of forming the ground's metals have fortified his arms, and you know that he needeth not the hammer in his leather-clad hands to crush an enemy." />
+      <part Name="Interesting" />
+      <stat Name="Level" Value="15" />
+      <stat Name="Hitpoints" Value="80" />
+      <stat Name="Strength" Value="20" />
+      <stat Name="Toughness" Value="20" />
+      <stat Name="Intelligence" Value="26" />
+      <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+      <tag Name="Gender" Value="male" />
+      <xtagGrammar Proper="true" />
     </object>
 </objects>
