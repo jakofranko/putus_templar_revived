@@ -31,7 +31,6 @@ namespace PutusTemplarRevived.Dialogue.KnightCommander
         public override bool HandleEvent(IsElementVisibleEvent E)
         {
             var player = The.Player;
-            XRL.Messages.MessageQueue.AddPlayerMessage("Hello, Im a message from IsElementVisibleEvent!");
             var isTemplar = player.GetPropertyOrTag("BecameGunnerKnightTemplar");
             XRL.Messages.MessageQueue.AddPlayerMessage(isTemplar);
             if (isTemplar == "true") return false;
@@ -60,7 +59,7 @@ namespace PutusTemplarRevived.Dialogue.KnightCommander
                     muralWeight: JournalAccomplishment.MuralWeight.VeryHigh
                 );
 
-                player.pRender.Tile = "Creatures/sw_templar_gunner.bmp";
+                player.pRender.Tile = "Creatures/sw_templar_gunner_flipped.bmp";
                 player.SetStringProperty("BecameGunnerKnightTemplar", "true");
             }
 

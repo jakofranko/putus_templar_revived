@@ -35,7 +35,9 @@
       <part Name="Brain" Wanders="false" Factions="Templar-100" />
       <part Name="Description" Short="A grizzled =pronouns.personTerm=, soot and ash mixing with oil and sweat upon his palid flesh. Goggles addorn =pronouns.possessive= hairless head, and =pronouns.possessive= beard errupts like the vommit of a volcano from =pronouns.possessive= face. Years of forming the ground's metals have fortified =pronouns.possessive= arms, and you know that =pronouns.subjective= needeth not the hammer in =pronouns.possessive= leather-clad hands to crush an enemy." />
       <part Name="Interesting" />
+      <part Name="GivesRep" />
       <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+      <tag Name="Mayor" Value="Putus Templar Encampment" />
       <tag Name="Gender" Value="female" />
       <xtagGrammar Proper="true" />
     </object>
@@ -44,7 +46,7 @@
       <part Name="Render" DisplayName="Cythilde" Tile="creatures/sw_templar_squire.bmp" RenderString="a" />
       <part Name="ConversationScript" ConversationID="CythildeDialogue" />
       <part Name="Brain" Wanders="false" Factions="Templar-100" />
-      <part Name="Description" Short="A grizzled =pronouns.personTerm=, soot and ash mixing with oil and sweat upon his palid flesh. Goggles addorn =pronouns.possessive= hairless head, and =pronouns.possessive= beard errupts like the vommit of a volcano from his face. Years of forming the ground's metals have fortified his arms, and you know that he needeth not the hammer in his leather-clad hands to crush an enemy." />
+      <part Name="Description" Short="The thin form of a =pronouns.personTerm= slouches over a table spread with parchment upon which is scrawled inscruitable diagrams. =pronouns.subjective= brushes bits of chrome and copper off a sheaf with one hand, while with the other =pronouns.subjective= wipes sweat from =pronouns.possessive= hairless face. Eyes and flesh are colorless, as if sapped by the very things =pronouns.subjective= studies, =pronouns.possessive= countenance permanently sour." />
       <part Name="Interesting" />
       <stat Name="Level" Value="15" />
       <stat Name="Hitpoints" Value="80" />
@@ -54,5 +56,27 @@
       <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
       <tag Name="Gender" Value="male" />
       <xtagGrammar Proper="true" />
+    </object>
+
+    <object Name="TemplarApothecary" Inherits="Apothecary">
+        <part Name="Brain" Wanders="false" Factions="Templar-100" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    </object>
+
+    <object Name="TemplarChef" Inherits="Chef">
+        <part Name="Brain" Wanders="false" Factions="Templar-100" />
+        <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    </object>
+
+    <!-- Objects -->
+    <object Name="TemplarOven" Inherits="Oven">
+      <part Name="Render" DisplayName="stone oven" ColorString="&amp;y" DetailColor="R" RenderString="234" Tile="Items/sw_oven.bmp" Occluding="false" RenderIfDark="true" />
+      <part Name="Campfire" PresetMeals="HotandSpiny" />
+      <tag Name="PresetMealMessage" Value="Eat some Hot and Spiny." />
+      <part Name="Description" Short="Warmth radiates from the crackling fire of the bright stone oven, and with it comes the smell of hot spine fruit jam and roasted tail." />
+    </object>
+
+    <object Name="Phylactery Table" Inherits="Octagonal Table">
+        <inventoryobject Blueprint="TemplarPhylactery" Number="3" />
     </object>
 </objects>

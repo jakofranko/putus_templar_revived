@@ -2,7 +2,7 @@
 <subtypes>
     <class ID="KnightDisciplines" ChargenTitle="choose a path" SingularTitle="KnightDiscipline" StatBoxDisplay="true">
         <category Name="Squires" DisplayName="&amp;rIn service to the Knights">
-            <subtype Name="Gunner-Knight Squire" Code="a" Gear="StartingGear_Gunner_Squire" Tile="Creatures/sw_templar_squire.bmp" DetailColor="O">
+            <subtype Name="Gunner-Knight Squire" Code="a" Gear="StartingGear_Gunner_Squire" Tile="Creatures/sw_templar_squire_flipped.bmp" DetailColor="O">
                 <stat Name="Strength" Bonus="1"/>
                 <stat Name="Toughness" Bonus="1"/>
                 <stat Name="Agility" Bonus="3"/>
@@ -12,7 +12,7 @@
                     <skill Name="HeavyWeapons_StrappingShoulders"/>
                 </skills>
             </subtype>
-            <subtype Name="Knight Squire" Code="b" Gear="StartingGear_Knight_Squire" Tile="Creatures/sw_templar_squire.bmp" DetailColor="R">
+            <subtype Name="Knight Squire" Code="b" Gear="StartingGear_Knight_Squire" Tile="Creatures/sw_templar_squire_flipped.bmp" DetailColor="R">
                 <stat Name="Strength" Bonus="2"/>
                 <stat Name="Toughness" Bonus="1"/>
                 <stat Name="Agility" Bonus="2"/>
@@ -23,7 +23,7 @@
                     <skill Name="ShortBlades_Bloodletter"/>
                 </skills>
             </subtype>
-            <subtype Name="Newfather Squire" Code="c" Gear="StartingGear_Newfather_Squire" Tile="Creatures/sw_templar_squire.bmp" DetailColor="r">
+            <subtype Name="Newfather Squire" Code="c" Gear="StartingGear_Newfather_Squire" Tile="Creatures/sw_templar_squire_flipped.bmp" DetailColor="r">
                 <stat Name="Strength" Bonus="1"/>
                 <stat Name="Ego" Bonus="2"/>
                 <stat Name="Willpower" Bonus="2"/>

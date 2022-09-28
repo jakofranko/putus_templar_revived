@@ -142,7 +142,7 @@
     <conversation ID="GwignabethDialogue" Namespace="PutusTemplarRevived.Dialogue.KnightCommander">
         <node ID="Start">
             <text>
-                Hail, my =pronouns.offspringTerm= =name=. I heard what happened to your party. My sincerest condolences squire. Alas, such is the price of war. Please rest a while here, and find succor for your body and mind. When you are ready, please speak with the others in the camp and offer them your services. There is much work to be done. I welcome you into our war-band.
+                Hail, my =player.offspringTerm= =name=. I heard what happened to your party. My sincerest condolences squire. Alas, such is the price of war. Please rest a while here, and find succor for your body and mind. When you are ready, please speak with the others in the camp and offer them your services. There is much work to be done. I welcome you into our war-band.
             </text>
             <choice
                 GotoID="ChooseKnightTemplar"

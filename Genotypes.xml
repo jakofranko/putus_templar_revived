@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <genotypes>
-  <genotype Name="Putus Templar" MutationPoints="0" StatPoints="40" AllowedMutationCategories="" CyberneticsLicensePoints="2" RandomWeight="10" DisplayName="Putus Templar" Subtypes="KnightDisciplines" Class="" Code="a" StartingLocation="JoppaWorld.13.18.1.1.10@37,22" Tile="Creatures/sw_templar.bmp" DetailColor="r" BodyObject="Humanoid" BaseHPGain="1-4" BaseSPGain="75" BaseMPGain="0" Species="human" isTrueKin="True">
+  <genotype Name="Putus Templar" MutationPoints="0" StatPoints="40" AllowedMutationCategories="" CyberneticsLicensePoints="2" RandomWeight="10" DisplayName="Putus Templar" Subtypes="KnightDisciplines" Class="" Code="a" StartingLocation="JoppaWorld.13.18.1.1.10@37,22" Tile="Creatures/sw_templar_flipped.bmp" DetailColor="r" BodyObject="Humanoid" BaseHPGain="1-4" BaseSPGain="75" BaseMPGain="0" Species="human" isTrueKin="True">
     <stat Name="Strength" Minimum="10" Maximum="24" />
     <stat Name="Agility" Minimum="10" Maximum="24" />
     <stat Name="Toughness" Minimum="10" Maximum="24" />
