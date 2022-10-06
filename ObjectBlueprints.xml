@@ -58,6 +58,17 @@
       <xtagGrammar Proper="true" />
     </object>
 
+    <object Name="TemplarNewfather" Inherits="Newfather">
+      <part Name="Render" DisplayName="Arthemond" Tile="creatures/sw_newfather.bmp" RenderString="a" />
+      <part Name="ConversationScript" ConversationID="ArthemondDialogue" />
+      <part Name="Brain" Wanders="false" Factions="Templar-100" />
+      <part Name="Description" Short="Voluminous robes, a ceremonial helm, and masque blur the lines of form and feature. The =pronouns.personTerm= stands straight, though the misalignment between =pronouns.possessive= head, hands, and feet reveal a crooked spine, like =pronouns.possessive= =pronouns.siblingTerm=s. =pronouns.Subjective= speaks with authority, though =pronouns.subjective= voice is calm and soothing. =pronouns.Possessive= gaze is something you feel, though =pronouns.possessive= eyes are hidden." />
+      <part Name="Interesting" />
+      <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+      <tag Name="Gender" Value="male" />
+      <xtagGrammar Proper="true" />
+    </object>
+
     <object Name="TemplarApothecary" Inherits="Apothecary">
         <part Name="Brain" Wanders="false" Factions="Templar-100" />
         <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />

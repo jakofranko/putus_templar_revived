@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <conversations>
-    <conversation ID="JanandDialogue" Namespace="PutusTemplarRevived.Dialogue.KnightCommander">
+    <conversation ID="JanandDialogue" Namespace="PutusTemplarRevived.Dialogue.ChoosePath">
         <node ID="Start">
             <text>
                 Hail, =player.formalAddressTerm= =name=. If you need not tools of war, then prithy, leave me to my fire. The days are short and the forge is hot.
             </text>
             <choice
                 GotoID="ChooseGunnerKnightTemplar"
-                IfNotHaveTagOrProperty="BecameGunnerKnightTemplar"
+                IfChosenPath="BecameGunnerKnightTemplar"
             >
                 <text>I have decided to pursue the Path of the Cannon.</text>
             </choice>
@@ -139,14 +139,14 @@
         </node>
     </conversation>
 
-    <conversation ID="GwignabethDialogue" Namespace="PutusTemplarRevived.Dialogue.KnightCommander">
+    <conversation ID="GwignabethDialogue" Namespace="PutusTemplarRevived.Dialogue.ChoosePath">
         <node ID="Start">
             <text>
-                Hail, my =player.offspringTerm= =name=. I heard what happened to your party. My sincerest condolences squire. Alas, such is the price of war. Please rest a while here, and find succor for your body and mind. When you are ready, please speak with the others in the camp and offer them your services. There is much work to be done. I welcome you into our war-band.
+                Hail, squire =name=. I heard what happened to your party. My sincerest condolences. Alas, such is the price of war. Please rest a while here, and find succor for your body and mind. When you are ready, please speak with the others in the camp and offer them your services. There is much work to be done. I welcome you into our war-band.
             </text>
             <choice
                 GotoID="ChooseKnightTemplar"
-                IfNotHaveTagOrProperty="BecameKnightTemplar"
+                IfChosenPath="BecameKnightTemplar"
             >
                 <text>I have decided to pursue the Path of the Sword and Shield.</text>
             </choice>
@@ -186,6 +186,31 @@
         </node>
         <node ID="ExplainResidents" Inherits="Questions">
             <text>TODO </text>
+        </node>
+    </conversation>
+
+    <conversation ID="ArthemondDialogue" Namespace="PutusTemplarRevived.Dialogue.ChoosePath">
+        <node ID="Start">
+            <text>Greetings, =player.offspringTerm= =name=. I am grieved to hear about the fate of your party. The bond between sword-=player.siblingTerm=s and family becomes indistinguishable after even a single fight, for blood binds both alike. To lose one is like unto losing the other, and it leaves a wound that cannot be truly healed. Solace often requires silence, but if you need company, come find me day or night. That pain is familiar to me as well.</text>
+            <choice
+                GotoID="ChooseNewfather"
+                IfChosenPath="BecameNewfather"
+            >
+                <text>I have decided to pursue the Path of Peace.</text>
+            </choice>
+            <choice GotoID="End">Live and drink, pater.</choice>
+        </node>
+
+        <node ID="ChooseNewfather">
+            <text>Are you sure? Once these oaths have been taken, they cannot be forsaken.</text>
+            <choice GotoID="Start">Let me consider for some time longer.</choice>
+            <choice GotoID="ConfirmNewfather">
+                <part Name="BecomeNewfather" />
+                <text>Yes, I am sure.</text>
+            </choice>
+        </node>
+        <node ID="ConfirmNewfather">
+            <text>Very well, so be it.</text>
         </node>
     </conversation>
 </conversations>

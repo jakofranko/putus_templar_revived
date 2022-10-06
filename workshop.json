@@ -1,8 +1,8 @@
 {
     "workshopId": 2347095444,
     "Title": "Playable Putus Templar",
-    "Description": "Allows you to start out as Putus Templars and have a high repuation from the start.\n\nAdded multiple classes to choose from: Knight, Squire , Banner Knight, New Father, Commander. Gunner Knight.\n\nEach has their own skin\n\nEvery level up gets you 100 Skill points\n\nAdded new skill..Enslavement..yeah.\n\nEnslavement: Allow you to force lower creatures to do your bidding. There isnt a limit to this so it is overpowered. The cost to get this skill however is high, and New Father is the most reasonable way to obtain it.\n\nPlans: Add more, add more to starts, Possible new starting location (If possible), new skill/grenade that summons Friendly templars or companions.\n\nDev's please don't ban.",
-    "Tags": "Templar,Putus Templar, gamestart,genotype,skills,skill,follower,slave,enslavement,templars",
+    "Description": "Play as a Putus Templar squire and seek to become a Knight.\n\nChoose a squire from the three Disciplines: Gunner-Knight Squire, Knight Squire, or Newfather Squire.\n\nNew questlines and starting village.",
+    "Tags": "Templar, Putus Templar, gamestart, genotype, ",
     "Visibility": "2",
     "ImagePath": "preview.png"
 }

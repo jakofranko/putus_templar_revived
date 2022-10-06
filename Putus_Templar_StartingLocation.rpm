@@ -3207,7 +3207,7 @@
     <object Name="Floor"></object>
   </cell>
   <cell X="65" Y="13">
-    <object Name="Newfather"></object>
+    <object Name="TemplarNewfather"></object>
     <object Name="Floor"></object>
   </cell>
   <cell X="65" Y="14">

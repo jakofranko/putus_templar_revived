@@ -13,9 +13,9 @@ using XRL.World.Conversations;
 using XRL.World.Effects;
 using XRL.World.Parts;
 
-namespace PutusTemplarRevived.Dialogue.KnightCommander
+namespace PutusTemplarRevived.Dialogue.ChoosePath
 {
-    public class BecomeKnightTemplar : IConversationPart
+    public class BecomeGunnerKnightTemplar : IConversationPart
     {
         public string Target = "End";
 
@@ -31,7 +31,7 @@ namespace PutusTemplarRevived.Dialogue.KnightCommander
         public override bool HandleEvent(IsElementVisibleEvent E)
         {
             var player = The.Player;
-            var isTemplar = player.GetPropertyOrTag("BecameKnightTemplar");
+            var isTemplar = player.GetPropertyOrTag("BecameGunnerKnightTemplar");
             XRL.Messages.MessageQueue.AddPlayerMessage(isTemplar);
             if (isTemplar == "true") return false;
 
@@ -41,7 +41,7 @@ namespace PutusTemplarRevived.Dialogue.KnightCommander
         public override bool HandleEvent(GetTargetElementEvent E)
         {
             var player = The.Player;
-            var isTemplar = player.GetPropertyOrTag("BecameKnightTemplar");
+            var isTemplar = player.GetPropertyOrTag("BecameGunnerKnightTemplar");
             XRL.Messages.MessageQueue.AddPlayerMessage(isTemplar);
 
             if (isTemplar == "true")
@@ -53,14 +53,14 @@ namespace PutusTemplarRevived.Dialogue.KnightCommander
             {
                 Popup.Show("Embued with a higher rank, you take on the mantle of a Kight Templar");
                 JournalAPI.AddAccomplishment(
-                    "You became a Knight Templar.",
-                    "On the " + Calendar.getDay() + " of " + Calendar.getMonth() + ", in the year " + Calendar.getYear().ToString() + " AR, =name= took on greater oaths and became a Templar Knight of the Order of the Sword and Shield.",
+                    "You became a Gunner-Knight Templar.",
+                    "On the " + Calendar.getDay() + " of " + Calendar.getMonth() + ", in the year " + Calendar.getYear().ToString() + " AR, =name= took on greater oaths and became a Templar Knight of the Order of the Cannon.",
                     muralCategory: JournalAccomplishment.MuralCategory.BodyExperienceNeutral,
                     muralWeight: JournalAccomplishment.MuralWeight.VeryHigh
                 );
 
-                player.pRender.Tile = "Creatures/sw_templar_flipped.bmp";
-                player.SetStringProperty("BecameKnightTemplar", "true");
+                player.pRender.Tile = "Creatures/sw_templar_gunner_flipped.bmp";
+                player.SetStringProperty("BecameGunnerKnightTemplar", "true");
             }
 
             return base.HandleEvent(E);
